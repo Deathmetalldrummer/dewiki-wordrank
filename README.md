@@ -1,5 +1,6 @@
 # dewiki-wordrank
-Counts word occurrences in German Wikipedia (case insensitive).
+
+Tab-delimited word frequency list compiled from the German Wikipedia.
 
 XML dump file read with [WikiExtractor](https://github.com/attardi/wikiextractor)
 
@@ -19,3 +20,6 @@ gegenspieler   3545
 ```
 
 Wikipedia dump from _2019-05-20_
+
+## Extract text from Wikipedia dump
+`python -m wikiextractor.WikiExtractor <Wikipedia dump file> --output <output path>`
