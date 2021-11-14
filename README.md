@@ -47,7 +47,7 @@ Run the script in this repository to compile the list of word occurrences:
 $ poetry run python -m dewiki_wordrank
 ```
 
-The result will be saved in the [dewiki_wordrank](https://github.com/gambolputty/dewiki-wordrank/raw/master/dewiki_wordrank) directory.
+The result will be saved in the [dewiki_wordrank](/dewiki_wordrank) directory.
 
 
 ----
