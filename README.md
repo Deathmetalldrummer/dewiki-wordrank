@@ -19,7 +19,7 @@ gegenspieler   3545
 ...
 ```
 
-Wikipedia dump from _2019-05-20_
+Wikipedia dump from _02-Nov-2021_
 
 ## Extract text from Wikipedia dump
-`python -m wikiextractor.WikiExtractor <Wikipedia dump file> --output <output path>`
+`python -m wikiextractor.WikiExtractor /mnt/c/Users/gregor/Dropbox/Python/_data/WikipediaDe/dewiki-latest-pages-articles-multistream.xml.bz2 --output /mnt/c/Users/gregor/Dropbox/Python/_data/WikipediaDe/text`

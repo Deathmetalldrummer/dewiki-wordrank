@@ -7,7 +7,7 @@ Reads a list of txt files compiled by "WikiExtractor" and counts word occurrence
 WikiExtractor: https://github.com/attardi/wikiextractor
 """
 
-wikidump_dir = 'G:/Dropbox/Python/_data/WikipediaDe/text'
+wikidump_dir = '/mnt/c/Users/gregor/Dropbox/Python/_data/WikipediaDe/text'
 min_word_len = 2
 counts = {}
 
@@ -25,7 +25,7 @@ for d in listdir(wikidump_dir):
         file_path = join(curr_dir, filename)
         with open(file_path, 'r', encoding="utf-8") as f:
             lines = f.readlines()
-        
+
         for line in lines:
             if not line:
                 continue
@@ -34,9 +34,10 @@ for d in listdir(wikidump_dir):
 
             # clean line
             line = re.sub(r'<!--.+?-->|<ref>.+?</ref>|<nowiki>.+?</nowiki>|<br>', '', line)
-                    
+
             # get word tokens
-            words = [w.lower() for w in re.findall(r'\w+', line) if len(w) >= min_word_len and re.match(r'^\d+$', w) is None]
+            words = [w.lower() for w in re.findall(r'\w+', line) if len(w) >=
+                     min_word_len and re.match(r'^\d+$', w) is None]
             for word in words:
                 counts[word] = counts.get(word, 0) + 1
 
