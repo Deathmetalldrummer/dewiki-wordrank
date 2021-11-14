@@ -46,7 +46,7 @@ $ poetry run python -m wikiextractor.WikiExtractor /path-to-xml-file.xml.bz2 --o
 Run the script in this repository to compile the list of word occurrences:
 
 ```shell
-$ poetry run python -m dewiki_wordrank <path-to-wikiextractor-output-directory>
+$ poetry run python -m dewiki_wordrank /path-to-wikiextractor-output-directory
 ```
 
 The result will be saved in the [dewiki_wordrank](/dewiki_wordrank) directory.
