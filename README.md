@@ -2,7 +2,9 @@
 
 Tab-delimited word frequency list compiled from the German Wikipedia.
 
-Results can be found here: [results.zip](https://github.com/gambolputty/dewiki-wordrank/raw/master/results.zip)
+Words were converted to lowercase before being counted.
+
+The list can be found here: [result.zip](https://github.com/gambolputty/dewiki-wordrank/raw/master/result.zip) (compressed txt-file)
 
 Example output:
 ```
@@ -44,11 +46,10 @@ $ poetry run python -m wikiextractor.WikiExtractor /path-to-xml-file.xml.bz2 --o
 Run the script in this repository to compile the list of word occurrences:
 
 ```shell
-$ poetry run python -m dewiki_wordrank
+$ poetry run python -m dewiki_wordrank <path-to-wikiextractor-output-directory>
 ```
 
 The result will be saved in the [dewiki_wordrank](/dewiki_wordrank) directory.
-
 
 ----
 
