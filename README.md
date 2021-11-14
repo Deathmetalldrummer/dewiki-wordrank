@@ -1,11 +1,12 @@
 # dewiki-wordrank
-Counts word occurrences in German Wikipedia (case insensitive).
 
-XML dump file read with [WikiExtractor](https://github.com/attardi/wikiextractor)
+Tab-delimited word frequency list compiled from the German Wikipedia.
 
-Results are in form of a tab-delimited txt file inside [results.zip](https://github.com/gambolputty/dewiki-wordrank/raw/master/results.zip)
+Words were converted to lowercase before being counted.
 
-Example:
+The list can be found here: [result.zip](https://github.com/gambolputty/dewiki-wordrank/raw/master/result.zip) (compressed txt-file)
+
+Example output:
 ```
 öpnv   3547
 sylvia   3547
@@ -18,4 +19,38 @@ gegenspieler   3545
 ...
 ```
 
-Wikipedia dump from _2019-05-20_
+Date of Wikipedia dump file: _02-Nov-2021_
+
+## Compiling the list
+
+To compile the list yourself, you need Python 3.8+ and [Poetry](https://python-poetry.org/) installed.
+
+### 1. Clone the repository and install dependencies with [Poetry](https://python-poetry.org/):
+
+```shell
+$ git clone git@github.com:gambolputty/dewiki-wordrank.git
+$ cd dewiki-wordrank
+$ poetry install
+```
+
+### 2. Extract Wikipedia pages
+
+Extract the Wikipedia pages from the XML dump file with [WikiExtractor](https://github.com/attardi/wikiextractor):
+
+```shell
+$ poetry run python -m wikiextractor.WikiExtractor /path-to-xml-file.xml.bz2 --output /path-to-output-directory
+```
+
+### 3. Count word occurrences
+
+Run the script in this repository to compile the list of word occurrences:
+
+```shell
+$ poetry run python -m dewiki_wordrank <path-to-wikiextractor-output-directory>
+```
+
+The result will be saved in the [dewiki_wordrank](/dewiki_wordrank) directory.
+
+----
+
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
