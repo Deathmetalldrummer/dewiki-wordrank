@@ -4,7 +4,7 @@ Tab-delimited word frequency list compiled from the German Wikipedia.
 
 Words were converted to lowercase before being counted.
 
-The list can be found here: [result.zip](https://github.com/gambolputty/dewiki-wordrank/raw/master/result.zip) (compressed txt-file)
+The list can be found here: [result.zip](https://github.com/gambolputty/dewiki-wordrank/blob/main/result.zip) (compressed txt-file)
 
 Example output:
 ```
